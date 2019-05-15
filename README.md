@@ -33,11 +33,11 @@ Topics:
 * `cd` into the _friends_ folder and type `yarn add redux react-redux redux-thunk redux-logger axios react-router-dom` which will install the needed dependencies. CHECK
 * To start out, create a reducer that will be passed as the rootReducer to `createStore`. Start with a pretty simple initialState object that has a `friends` property set as an empty array. Your state tree will grow pretty large as you build out more and more actions. CHECK
 * Don't forget to hook up the store using the `Provider` tag inside of `src/index.js`, passing it your newly created store. CHECK
-* You will need to use `redux-thunk` as a middleware inside of `src/index.js`. You'll want to be sure to pass it to `applyMiddleware()` then feed it into your createStore function. 
-* If you so choose, include `redux-logger` to your middleware. You're going to have plenty of action creators that will consume our API so you'll get plenty of actions triggered.
+* You will need to use `redux-thunk` as a middleware inside of `src/index.js`. You'll want to be sure to pass it to `applyMiddleware()` then feed it into your createStore function.  CHECK
+* If you so choose, include `redux-logger` to your middleware. You're going to have plenty of action creators that will consume our API so you'll get plenty of actions triggered. CHECK
 
 ## Build the App!
-* Add a route for a login page and build out a simple login form with username and password inputs and a submit button (design this however you would like).
+* Add a route for a login page and build out a simple login form with username and password inputs and a submit button (design this however you would like). CHECK
 * The login action creator should dispatch a "logging in" action, return the promise created by `axios.post`, then save the returned token to localStorage. You can connect your Login component, and show a spinner on your form or in your button while the login request is happening.
 * When the request returns, use the history object in your Login component to navigate your user to your FriendsList route
 * Create a `<PrivateRoute />` component to protect your other routes. It should check localStorage for a token, and redirect the user to your login route if there is not a token.
