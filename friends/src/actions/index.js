@@ -11,6 +11,7 @@ export const logIn = creds => dispatch => {
     .then(res => {
         localStorage.setItem("logInToken", res.data.payload)
         dispatch ({ type:LOGIN_SUCCESS, payload: res.data.payload })
+        return true;
     })
     .catch(err => console.log(err))
 }
